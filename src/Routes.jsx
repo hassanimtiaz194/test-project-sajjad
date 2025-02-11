@@ -29,7 +29,7 @@ export const PrivatePage = ({ children, condition = () => true, redirect = "/log
 
     useEffect(() => {
         const checkAuth = async () => {
-            if (true) {
+            if (!token) {
                 try {
                     const response = await refreshToken({ token });
                     localStorage.setItem("token", response.data.token);
