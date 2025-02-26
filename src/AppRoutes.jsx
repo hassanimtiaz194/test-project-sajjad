@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { PrivatePage, PublicPage } from "./Routes";
+import UpdateProfile from "./pages/UpdateProfile";
 
 function AppRoutes() {
     const [auth, setAuth] = React.useState({ loading: true });
@@ -22,6 +23,11 @@ function AppRoutes() {
                     <Route path="/" element={
                         <PrivatePage>
                             <Home />
+                        </PrivatePage>
+                    } />
+                    <Route path="/update-profile" element={
+                        <PrivatePage>
+                            <UpdateProfile />
                         </PrivatePage>
                     } />
                     <Route

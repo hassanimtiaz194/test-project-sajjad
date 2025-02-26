@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, TextField, Button, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../services/auth";
+import { login } from "../../services";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -44,6 +44,11 @@ const Login = () => {
       <br />
       <Button variant="contained" color="primary" fullWidth onClick={onSubmit}>
         Login
+      </Button>
+      <br />
+      <br />
+      <Button variant="text" color="primary" fullWidth onClick={() => navigate('/signup')}>
+        Sign Up
       </Button>
     </Container>
   );

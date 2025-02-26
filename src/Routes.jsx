@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate, useLocation } from "react-router-dom";
-import { refreshToken } from "../services/auth";
+import { refreshToken } from "../services";
 
 export const PublicPage = ({ children, redirect = "/", followFrom = false }) => {
     const location = useLocation();
